@@ -15,7 +15,7 @@ def load_library(path)
   end
   emoticons.each do |eng_meaning, arr|
     # hash["get_emoticon"][arr[0]] = eng_meaning
-    hash["get_emoticon"][arr[0]] = [arr[1]]
+    hash["get_emoticon"][arr[0]] = arr[1]
   end
   # hash[:get_meaning][emoticons.keys[0]] = emoticons.keys[0][1]
   hash
