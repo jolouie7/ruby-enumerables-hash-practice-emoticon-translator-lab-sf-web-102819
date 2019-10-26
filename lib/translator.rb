@@ -9,9 +9,12 @@ def load_library(path)
   hash["get_meaning"] = {}
   hash["get_emoticon"] = {}
   
-  emoticons.each do |meaning, arr|
+  emoticons.each do |jp_meaning, arr|
     # binding.pry
-    hash["get_meaning"][arr[1]] = meaning
+    hash["get_meaning"][arr[1]] = jp_meaning
+  end
+  emoticons.each do |eng_meaning, arr|
+    hash["get_emoticon"][arr[0]] = eng_meaning
   end
   # hash[:get_meaning][emoticons.keys[0]] = emoticons.keys[0][1]
   hash
