@@ -1,7 +1,17 @@
 # require modules here
+require "yaml"
 
-def load_library
-  # code goes here
+def load_library(path)
+  #INPUT: HoA (1hash w/ array as val)
+  hash = {}
+  emoticons = YAML.load_file(path)
+  hash[:get_meaning] = {}
+  hash[:get_emoticon] = {}
+  
+  # emoticons.each do |meaning, arr|
+  hash[:get_meaning][emoticons.keys[0]] = emoticons.keys[0]
+  # end
+  hash
 end
 
 def get_japanese_emoticon
